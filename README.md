@@ -24,24 +24,41 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 <p align="center">
       <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/SSLChange.jpg", width=800>
 </p>
-<br>
 
 ## Catalog
-
+- [x] Visualization demo
+- [x] Dependencies
+- [ ] Domain Adapter Training
+- [ ] SSLChange Pre-training
+- [ ] Downstream Finetuning
 
 ## Visualization demo
 
 
 ## Dependencies
+* Linux (Recommended) or Windows
+* Python 3.8+
+* Pytorch 1.8.0 or higher
+* CUDA 10.1 or higher
 
+## 1. Domain Adapter Training
+### Dataset for DA
+```
+filetree 
+├── ARCHITECTURE.md
+├── LICENSE.txt
+├── README.md
+├── /account/
+├── /bbs/
+├── /docs/
+│  ├── /rules/
+│  │  ├── backend.txt
+│  │  └── frontend.txt
+```
+## 2. SSLChange Pre-training
+### Dataset for Pre-training
 
-## Domain Adapter Training
-
-
-## SSLChange Pre-training
-
-
-## Downstream Finetuning
+## 3. Downstream Finetuning
 
 Thanks for your attention on our work. The codes will be published after our paper is accepted. 
 
