@@ -3,11 +3,15 @@ Pytorch codes for SSLChange Framework
 
 ![Author](https://img.shields.io/badge/Author-MarsZYT-orange.svg)
 
+This is a PyTorch implementation of the paper [SSLChange: A Self-supervised Change Detection Framework Based on Domain Adaptation](https://arxiv.org/abs/2405.18224)
+
 
 The overview of our proposed SSLChange pre-training framework for Remote Sensing Change Decetion tasks.  
-![results](imgs/SSLChange.png)
+<p align="center">
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/SSLChange.jpg", width=800>
+</p>
 
-This is a PyTorch implementation of the paper [SSLChange: A Self-supervised Change Detection Framework Based on Domain Adaptation](https://arxiv.org/abs/2405.18224)
+If you find our project useful in you own research, please cite our paper below. 
 ```
 @Article{zhao2024sslchange,
       title={SSLChange: A Self-supervised Change Detection Framework Based on Domain Adaptation}, 
