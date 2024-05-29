@@ -48,13 +48,12 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 * The training target of Domain Adapter is to project the T1 samples into T2 domain style without change image content.
 * The architecture could be **ANY** Image-to-Image Translation Algorithms. 
 <p align="center">
-      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/DA.jpg", width=280>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/DA.jpg", width=250>
 </p>
 
 Here we take [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) with stable performance as a example to train the Domain Adapter. 
 
-#### `1.1 Dataset Preparation for DA Training`
-Only the training set of CDD dataset is used for DA training, and the no label images are involved in the training. 
+**Step 1. Dataset Preparation for DA Training:** Only the training set of CDD dataset is used for DA training, and the no label images are involved in the training. 
 ```
 CDD
 ├── /train/
@@ -69,14 +68,22 @@ CDD
 │  │  └── 00002.jpg
 │  │  └── ......
 ```
-#### 1.2 Train the DA
+**Step 2. Train the Domain Adapter.**
 
 ```shell
-python train.py --dataroot datasets/CDD/train/ --name your_project
+python train.py --dataroot datasets/CDD/train/ --name your_project 
 ```
 
+**Step 3. SSLChange Pre-training Dataset Generation.**
+```shell
+python test.py --dataroot datasets/CDD/train/ --name your_project --model cycle_gan --direction AtoB
+```
+
+* Some generated samples:
+* 
+
 ### `2. SSLChange Pre-training`
-#### `2.1 Dataset for Pre-training`
+### `2.1 Dataset for Pre-training`
 
 ```
 GenCDD
