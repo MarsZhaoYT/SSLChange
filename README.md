@@ -1,5 +1,4 @@
 # SSLChange
-Pytorch codes for SSLChange Framework
 
 ![Author](https://img.shields.io/badge/Author-MarsZYT-orange.svg)
 
