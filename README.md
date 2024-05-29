@@ -79,8 +79,23 @@ python train.py --dataroot datasets/CDD/train/ --name your_project
 python test.py --dataroot datasets/CDD/train/ --name your_project --model cycle_gan --direction AtoB
 ```
 
-* Some generated samples:
-* 
+**⭐️Some generated samples:**
+  
+_Original T1 images:_
+<p align="center">
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00000_real_A.png", width=128>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00002_real_A.png", width=128>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00011_real_A.png", width=128>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00022_real_A.png", width=128>
+</p>     
+
+_Generated Pseudo T2 images:_
+<p align="center">
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00000_fake_B.png", width=128>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00002_fake_B.png", width=128>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00011_fake_B.png", width=128>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00022_fake_B.png", width=128>
+</p>
 
 ### `2. SSLChange Pre-training`
 ### `2.1 Dataset for Pre-training`
