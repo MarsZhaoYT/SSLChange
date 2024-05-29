@@ -44,16 +44,23 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 ## 1. Domain Adapter Training
 ### Dataset for DA
 ```
-filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
+CDD
+├── /train/
+│  ├── /A/
+│  │  ├── 00000.jpg
+│  │  └── 00001.jpg
+│  │  └── 00002.jpg
+│  │  └── ......
+│  ├── /B/
+│  │  ├── 00000.jpg
+│  │  └── 00001.jpg
+│  │  └── 00002.jpg
+│  │  └── ......
+│  ├── /OUT/
+│  │  ├── 00000.jpg
+│  │  └── 00001.jpg
+│  │  └── 00002.jpg
+│  │  └── ......
 ```
 ## 2. SSLChange Pre-training
 ### Dataset for Pre-training
