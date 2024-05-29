@@ -42,6 +42,14 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 * CUDA 10.1 or higher
 
 ## 1. Domain Adapter Training
+First, a **Domain Adapter** requires to be trained which will serve as an auto-augmenter in the subsequent SSLChange Pre-training. 
+
+<br>
+Considering the natural existence of two temporal domains in RSCD tasks, the Domain Adapter is utilized to project the T1 samples into T2 domain without change the image content. 
+<p align="center">
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/DA.jpg", width=280>
+</p>
+
 ### Dataset for DA
 ```
 CDD
