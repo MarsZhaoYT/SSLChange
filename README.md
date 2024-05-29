@@ -67,13 +67,13 @@ CDD
 │  │  └── 00002.jpg
 │  │  └── ......
 ```
-**Step 2. Train the Domain Adapter.**
+**Step 2. Train the Domain Adapter.** (train.py file in [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix))
 
 ```shell
 python train.py --dataroot datasets/CDD/train/ --name your_project 
 ```
 
-**Step 3. SSLChange Pre-training Dataset Generation.**
+**Step 3. SSLChange Pre-training Dataset Generation.** (test.py file in [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix))
 ```shell
 python test.py --dataroot datasets/CDD/train/ --name your_project --model cycle_gan --direction AtoB
 ```
