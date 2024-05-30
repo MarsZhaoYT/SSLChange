@@ -181,7 +181,7 @@ python main_SNUNet_WithUp.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PR
                              --gpu_ids 0 --head_type sslchange --classifier_name SNUNet --batch_size 4
 ```
 
-**🖨📝✅✔  Step 4. Testing.** <br>
+**✔  Step 4. Testing.** <br>
 
 ```shell
 python eval.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PROJECT --classifier_name SNUNet --gpu_ids 0
