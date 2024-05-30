@@ -135,6 +135,10 @@ We release our pre-trained SSLChange weights on GenCDD dataset in [Google Drive]
 ____
 ### `3. Downstream Finetuning`
 
+<p align="center">
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00000_fake_B.png", width=128>
+</p>
+
 **📂 Step 1. Dataset Preparation for SSLChange Pre-training.** <br>
 The whole portion of CDD dataset is used for downstream supervised finetuning.
 
