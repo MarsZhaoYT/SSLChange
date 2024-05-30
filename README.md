@@ -162,13 +162,19 @@ CDD
 **🎮  Step 2. Pre-trained Weight Transferring .** <br>
 Create a new dir to store the pre-trained SSLChange weights file.
 ```shell
-mkdir Transfer-Model/pretrained_models
-cp ../SSLChange/checkpoint/YOUR_PROJECT/ ../Transfer-Model/pretrained_models/YOUR_PROJECT/
+cd Transfer-Model
+mkdir pretrained_models
+mkdir pretrained_models/PRETRAINED_PROJECT
+cp ../SSLChange/checkpoint/YOUR_PROJECT/ ../Transfer-Model/pretrained_models/PRETRAINED_PROJECT/
 ```
 
 **🔥  Step 3. Downstream Finetuning.** <br>
 Take the finetuning for [SNUNet-CD](https://github.com/likyoo/Siam-NestedUNet) as an example.
 
+```shell
+python main_SNUNet_WithUp.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PROJECT --pretrained_model PRETRAINED_PROJECT/latest_net_SimSiam.pth --gpu_ids 0 --head_type sslchange \
+                             --classifier_name SNUNet --batch_size 4
+```
 
 
 Thanks for your attention on our work. The codes will be published after our paper is accepted. 
