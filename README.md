@@ -176,6 +176,16 @@ python main_SNUNet_WithUp.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PR
                              --classifier_name SNUNet --batch_size 4
 ```
 
+**🔥  Step 4. Testing.** <br>
 
-Thanks for your attention on our work. The codes will be published after our paper is accepted. 
+```shell
+python eval.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PROJECT --classifier_name SNUNet --gpu_ids 0
+```
 
+
+## 💡 Acknowledgement
+* [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+* [SNUNet-CD](https://github.com/likyoo/Siam-NestedUNet)
+* [SimSiam](https://github.com/facebookresearch/simsiam)
+* [CDD Dataset](https://paperswithcode.com/dataset/cdd-dataset-season-varying)
+* [LEVIR-CD Dataset](https://paperswithcode.com/sota/change-detection-on-levir-cd)
