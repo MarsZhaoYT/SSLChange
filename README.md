@@ -52,7 +52,8 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 
 * Here we take [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) with stable performance as a example to train the Domain Adapter. 
 
-**Step 1. Dataset Preparation for DA Training:** Only the training set of CDD dataset is used for DA training, and the no label images are involved in the training. 
+**Step 1. Dataset Preparation for DA Training:** <br>
+Only the training set of CDD dataset is used for DA training, and the no label images are involved in the training.
 ```
 CDD
 ├── /train/
@@ -76,7 +77,7 @@ python train.py --dataroot datasets/CDD/train/ --name your_project
 python test.py --dataroot datasets/CDD/train/ --name your_project --model cycle_gan --direction AtoB
 ```
 
-**⭐️Some generated samples:**
+**⭐️Some generated samples of GenCDD dataset:**
   
 _Original T1 images:_
 <p align="center">
@@ -86,7 +87,7 @@ _Original T1 images:_
       <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00022_real_A.png", width=128>
 </p>     
 
-_Generated Pseudo T2 images:_
+_Generated Pseudo T2 images in GenCDD dataset:_
 <p align="center">
       <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00000_fake_B.png", width=128>
       <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00002_fake_B.png", width=128>
@@ -95,6 +96,7 @@ _Generated Pseudo T2 images:_
 </p>
 
 ### `2. SSLChange Pre-training`
+Perform the SSLChange Pre-training with the Generated GenCDD dataset.
 ### `2.1 Dataset for Pre-training`
 
 ```
