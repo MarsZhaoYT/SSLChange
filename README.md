@@ -50,7 +50,7 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
       <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/DA.jpg", width=250>
 </p>
 
-Here we take [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) with stable performance as a example to train the Domain Adapter. 
+* Here we take [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) with stable performance as a example to train the Domain Adapter. 
 
 **Step 1. Dataset Preparation for DA Training:** Only the training set of CDD dataset is used for DA training, and the no label images are involved in the training. 
 ```
@@ -59,12 +59,10 @@ CDD
 │  ├── /A/
 │  │  ├── 00000.jpg
 │  │  └── 00001.jpg
-│  │  └── 00002.jpg
 │  │  └── ......
 │  ├── /B/
 │  │  ├── 00000.jpg
 │  │  └── 00001.jpg
-│  │  └── 00002.jpg
 │  │  └── ......
 ```
 **Step 2. Train the Domain Adapter.** (train.py file in [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix))
@@ -105,12 +103,10 @@ GenCDD
 │  ├── /A/
 │  │  ├── 00000.jpg
 │  │  └── 00001.jpg
-│  │  └── 00002.jpg
 │  │  └── ......
 │  ├── /B/
 │  │  ├── 00000.jpg
 │  │  └── 00001.jpg
-│  │  └── 00002.jpg
 │  │  └── ......
 ```
 
@@ -122,17 +118,14 @@ CDD
 │  ├── /A/
 │  │  ├── 00000.jpg
 │  │  └── 00001.jpg
-│  │  └── 00002.jpg
 │  │  └── ......
 │  ├── /B/
 │  │  ├── 00000.jpg
 │  │  └── 00001.jpg
-│  │  └── 00002.jpg
 │  │  └── ......
 │  ├── /OUT/
 │  │  ├── 00000.jpg
 │  │  └── 00001.jpg
-│  │  └── 00002.jpg
 │  │  └── ......
 ```
 
