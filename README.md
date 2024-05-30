@@ -160,7 +160,6 @@ CDD
 │  ├── /A/
 │  ├── /B/
 │  ├── /OUT/
-
 ```
 
 **🎮  Step 2. Pre-trained Weight Transferring.** <br>
