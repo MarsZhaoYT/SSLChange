@@ -38,10 +38,10 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 - [ ] Downstream Finetuning
 
 ## 🎨 Visualization demo
-The visualization results of baselines w/o and w/ SSLChange.
+The visualization results of baselines w/o and w/ SSLChange on CDD-series dataset.
 
 <p align="center">
-      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/visual_cdd.png", width=500>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/visual_cdd.png", width=1000>
 </p>
 
 ## 💼 Dependencies
