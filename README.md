@@ -27,7 +27,7 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 ## Catalog
 - [x] Visualization demo
 - [x] Dependencies
-- [ ] Domain Adapter Training
+- [x] Domain Adapter Training
 - [ ] SSLChange Pre-training
 - [ ] Downstream Finetuning
 
