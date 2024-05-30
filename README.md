@@ -22,7 +22,7 @@ If you find our project useful in you own research, please consider cite our pap
 }
 ```
 
-* Our manuscript has been submitted to IEEE TGRS and is under review. 
+* 📩 Our manuscript has been submitted to IEEE TGRS and is under review. 
 
 ## 🌏 Architecture Overview
 The overview of our proposed SSLChange pre-training framework for Remote Sensing Change Decetion tasks.  
@@ -30,7 +30,7 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
       <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/SSLChange.jpg", width=800>
 </p>
 
-## 📗🎮💎 Catalog
+## 📗💎 Catalog
 - [x] Visualization demo
 - [x] Dependencies
 - [x] Domain Adapter Training
@@ -124,11 +124,12 @@ GenCDD
 Only the training set of GenCDD dataset is used for SSLChange Pre-training.
 
 ```shell
+cd SSLChange
 python train.py --dataroot ./datasets/GenCCD/train --name YOUR_PROJECT --model sslchange --gpu_ids 0 --simsiam_aug \
                 --batch_size 8 --contrastive_head sslchange_head 
 ```
 
-We release our pretrained SSLChange weights on GenCDD dataset in [Google Drive](), and [BaiduYunPan]() (code: ).
+We release our pre-trained SSLChange weights on GenCDD dataset in [Google Drive](), and [BaiduYunPan]() (code: ).
 
 
 ____
@@ -154,7 +155,16 @@ CDD
 │  │  └── ......
 ```
 
-**🔥  Step 2. Downstream Finetuning.** <br>
+**🎮  Step 2. Pre-trained Weight Transferring .** <br>
+Create a new dir to store the pre-trained SSLChange weights file.
+```shell
+mkdir Transfer-Model/pretrained_models
+cp ../SSLChange/checkpoint/YOUR_PROJECT/ ../Transfer-Model/pretrained_models/YOUR_PROJECT/
+```
+
+**🔥  Step 3. Downstream Finetuning.** <br>
+Take the finetuning for [SNUNet-CD](https://github.com/likyoo/Siam-NestedUNet) as an example.
+
 
 
 Thanks for your attention on our work. The codes will be published after our paper is accepted. 
