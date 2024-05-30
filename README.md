@@ -31,13 +31,13 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 </p>
 
 ## 📗 Catalog
-- [x] Visualization demo
+- [x] Visualization Demo
 - [x] Dependencies
 - [x] Domain Adapter Training
 - [x] SSLChange Pre-training
 - [x] Downstream Finetuning
 
-## 🎨 Visualization demo
+## 🎨 Visualization Demo
 The visualization results of baselines w/o and w/ SSLChange on CDD-series dataset.
 
 <p align="center">
