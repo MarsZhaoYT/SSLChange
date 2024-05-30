@@ -136,7 +136,7 @@ ____
 ### `3. Downstream Finetuning`
 
 <p align="center">
-      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/00000_fake_B.png", width=128>
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/ft.png", width=500>
 </p>
 
 **📂 Step 1. Dataset Preparation for SSLChange Pre-training.** <br>
