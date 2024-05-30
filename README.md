@@ -133,7 +133,7 @@ python train.py --dataroot ./datasets/GenCCD/train --name YOUR_PROJECT --model s
                 --batch_size 8 --contrastive_head sslchange_head 
 ```
 
-We release our pre-trained SSLChange weights on GenCDD dataset in [Google Drive](), and [BaiduYunPan]() (code: ).
+We release our pre-trained SSLChange weights on GenCDD dataset in [Google Drive](), and [BaiduYunPan](https://pan.baidu.com/s/1WErgErI6V9WeSMQ6XBnx9A) (code: scpt).
 
 
 ____
