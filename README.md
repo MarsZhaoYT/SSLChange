@@ -52,7 +52,7 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 
 * Here we take [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) with stable performance as a example to train the Domain Adapter. 
 
-**Step 1. Dataset Preparation for DA Training:** <br>
+**Step 1. Dataset Preparation for DA Training.** <br>
 Only the training set of CDD dataset is used for DA training, and the no label images are involved in the training.
 ```
 CDD
@@ -69,12 +69,12 @@ CDD
 **Step 2. Train the Domain Adapter.** (train.py file in [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix))
 
 ```shell
-python train.py --dataroot datasets/CDD/train/ --name your_project 
+python train.py --dataroot datasets/CDD/train/ --name YOUR_PROJECT 
 ```
 
 **Step 3. SSLChange Pre-training Dataset Generation.** (test.py file in [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix))
 ```shell
-python test.py --dataroot datasets/CDD/train/ --name your_project --model cycle_gan --direction AtoB
+python test.py --dataroot datasets/CDD/train/ --name YOUR_PROJECT --model cycle_gan --direction AtoB
 ```
 
 **⭐️Some generated samples of GenCDD dataset:**
@@ -97,8 +97,9 @@ _Generated Pseudo T2 images in GenCDD dataset:_
 
 ### `2. SSLChange Pre-training`
 Perform the SSLChange Pre-training with the Generated GenCDD dataset.
-### `2.1 Dataset for Pre-training`
 
+**Step 1. Dataset Preparation for SSLChange Pre-training.** <br>
+Only the training set of GenCDD dataset is used for SSLChange Pre-training.
 ```
 GenCDD
 ├── /train/
@@ -110,6 +111,14 @@ GenCDD
 │  │  ├── 00000.jpg
 │  │  └── 00001.jpg
 │  │  └── ......
+```
+
+**Step 2. Label-free Pre-training of SSLChange Framework.** <br>
+Only the training set of GenCDD dataset is used for SSLChange Pre-training.
+
+```shell
+python train.py --dataroot ./datasets/GenCCD/train --name YOUR_PROJECT --model weighted_sslchange --gpu_ids 0 --simsiam_aug \
+                --batch_size 8 --contrastive_head GLCL --weight_global 0.1
 ```
 
 ### `3. Downstream Finetuning`
