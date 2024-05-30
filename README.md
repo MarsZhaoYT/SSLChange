@@ -30,7 +30,7 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
       <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/SSLChange.jpg", width=800>
 </p>
 
-## 📗💎 Catalog
+## 📗 Catalog
 - [x] Visualization demo
 - [x] Dependencies
 - [x] Domain Adapter Training
@@ -38,7 +38,11 @@ The overview of our proposed SSLChange pre-training framework for Remote Sensing
 - [ ] Downstream Finetuning
 
 ## 🎨 Visualization demo
+The visualization results of baselines w/o and w/ SSLChange.
 
+<p align="center">
+      <img src="https://github.com/MarsZhaoYT/SSLChange/blob/main/imgs/visual_cdd.png", width=500>
+</p>
 
 ## 💼 Dependencies
 * Linux (Recommended) or Windows
@@ -159,7 +163,7 @@ CDD
 │  │  └── ......
 ```
 
-**🎮  Step 2. Pre-trained Weight Transferring .** <br>
+**🎮  Step 2. Pre-trained Weight Transferring.** <br>
 Create a new dir to store the pre-trained SSLChange weights file.
 ```shell
 cd Transfer-Model
