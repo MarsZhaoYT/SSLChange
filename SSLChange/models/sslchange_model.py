@@ -33,7 +33,7 @@ class SSLChangeModel(BaseModel):
             self.model_names = ['SSLChange']
 
 
-        # ----------------- 构建转换网络 ---------------------
+        # ----------------- 构建网络 ---------------------
         self.netSSLChange = sslchange_net.ContrastiveNet(head_type=opt.contrastive_head)
         self.netSSLChange = networks.init_net(net=self.netSSLChange, init_type='kaiming')
 
@@ -69,16 +69,6 @@ class SSLChangeModel(BaseModel):
         self.image_paths = input['A_paths' if AtoB else 'B_paths']
 
     def get_scheduler(self, optimizer, opt, lr_policy):
-            """Return a learning rate scheduler
-            Parameters:
-                optimizer          -- the optimizer of the network
-                args (option class) -- stores all the experiment flags; needs to be a subclass of BaseOptions．　
-                                    opt.lr_policy is the name of learning rate policy: linear | step | plateau | cosine
-            For 'linear', we keep the same learning rate for the first <opt.niter> epochs
-            and linearly decay the rate to zero over the next <opt.niter_decay> epochs.
-            For other schedulers (step, plateau, and cosine), we use the default PyTorch schedulers.
-            See https://pytorch.org/docs/stable/optim.html for more details.
-            """
             epochs = opt.n_epochs + opt.n_epochs_decay
             if lr_policy == 'linear':
                 def lambda_rule(epoch):
@@ -97,9 +87,6 @@ class SSLChangeModel(BaseModel):
         self.f_A, self.p_A, self.z_A, self.f_B, self.p_B, self.z_B = self.netSSLChange(self.batch_A, self.batch_B)
                 
     def backward_SSLChange(self):
-        '''
-        pseudo label和 Predicted CD map进行loss计算
-        '''
         if self.opt.contrastive_head == 'sslchange_head' or self.opt.contrastive_head == 'Attn_sslchange_head':
             self.loss_sslchange_global = -0.5 * (self.criterionCos(self.p_A[0], self.z_B[0]).mean() + self.criterionCos(self.p_B[0], self.z_A[0]).mean())
             self.loss_sslchange_local = -0.5 * (self.criterionCos(self.p_A[1], self.z_B[1]).mean() + self.criterionCos(self.p_B[1], self.z_A[1]).mean())
@@ -112,11 +99,8 @@ class SSLChangeModel(BaseModel):
         self.loss_total.backward()
 
     def optimize_parameters(self):
-        """Calculate losses, gradients, and update network weights; called in every training iteration"""
-        # 执行forward()中的步骤
         self.forward()  # compute fake images and reconstruction images.
 
-        # 打开netCDNet的梯度
         self.set_requires_grad(self.netSSLChange, True)
 
         self.optimizer.zero_grad()    # 将优化器梯度置0
