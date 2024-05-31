@@ -175,9 +175,9 @@ cp ../SSLChange/checkpoint/YOUR_PROJECT/ ../Transfer-Model/pretrained_models/PRE
 Take the finetuning for [SNUNet-CD](https://github.com/likyoo/Siam-NestedUNet) as an example.
 
 ```shell
-python main_SNUNet_WithUp.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PROJECT \
-                             --pretrained_model PRETRAINED_PROJECT/latest_net_SimSiam.pth \
-                             --gpu_ids 0 --head_type sslchange --classifier_name SNUNet --batch_size 4
+python main_finetune.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PROJECT \
+                        --pretrained_model PRETRAINED_PROJECT/latest_net_SimSiam.pth \
+                        --gpu_ids 0 --head_type sslchange --classifier_name SNUNet --batch_size 4
 ```
 
 **✔  Step 4. Testing.** <br>
