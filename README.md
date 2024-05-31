@@ -188,6 +188,9 @@ python eval.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PROJECT --classi
 
 
 ## 💡 Acknowledgement
+
+We are grateful to those who kindly share their codes, which we referenced in our implementation. 
+
 * [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 * [SNUNet-CD](https://github.com/likyoo/Siam-NestedUNet)
 * [SimSiam](https://github.com/facebookresearch/simsiam)
