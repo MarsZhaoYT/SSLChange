@@ -168,7 +168,7 @@ Create a new dir to store the pre-trained SSLChange weights file.
 cd Transfer-Model
 mkdir pretrained_models
 mkdir pretrained_models/PRETRAINED_PROJECT
-cp ../SSLChange/checkpoint/YOUR_PROJECT/ ../Transfer-Model/pretrained_models/PRETRAINED_PROJECT/
+cp -r ../SSLChange/checkpoint/YOUR_PROJECT/ ../Transfer-Model/pretrained_models/PRETRAINED_PROJECT/
 ```
 
 **🔥  Step 3. Downstream Finetuning.** <br>
