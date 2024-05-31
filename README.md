@@ -177,7 +177,7 @@ Take the finetuning for [SNUNet-CD](https://github.com/likyoo/Siam-NestedUNet) a
 ```shell
 python main_finetune.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PROJECT \
                         --pretrained_model PRETRAINED_PROJECT/latest_net_SimSiam.pth \
-                        --gpu_ids 0 --head_type sslchange --classifier_name SNUNet --batch_size 4
+                        --gpu_ids 0 --head_type sslchange_head --classifier_name SNUNet --batch_size 4
 ```
 
 **✔  Step 4. Testing.** <br>
@@ -188,6 +188,9 @@ python eval.py --dataset_dir datasets/CDD --name YOUR_FTINETUNE_PROJECT --classi
 
 
 ## 💡 Acknowledgement
+
+We are grateful to those who kindly share their codes, which we referenced in our implementation. 
+
 * [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 * [SNUNet-CD](https://github.com/likyoo/Siam-NestedUNet)
 * [SimSiam](https://github.com/facebookresearch/simsiam)
