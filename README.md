@@ -63,7 +63,7 @@ The visualization results of baselines w/o and w/ SSLChange on CDD-series datase
 * Here we take [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) with stable performance as an example to train the Domain Adapter. 
 
 **📂 Step 1. Dataset Preparation for DA Training.** <br>
-Only the training set of CDD dataset is used for DA training, and the no label images are involved in the training.
+Only the training set of CDD dataset is used for DA training, and no label images are involved in the training.
 ```
 CDD
 ├── /train/
