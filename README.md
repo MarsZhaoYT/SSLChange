@@ -14,15 +14,18 @@ This is a PyTorch implementation of the paper [SSLChange: A Self-supervised Chan
 If you find our project useful in you own research, please consider cite our paper below.
 
 ```
-@Article{zhao2024sslchange,
-      title={SSLChange: A Self-supervised Change Detection Framework Based on Domain Adaptation}, 
-      author={Yitao Zhao and Turgay Celik and Nanqing Liu and Feng Gao and Heng-Chao Li},
-      year={2024},
-      journal={arXiv:2405.18224},
-}
+@ARTICLE{zhap2024sslchange,
+  author={Zhao, Yitao and Celik, Turgay and Liu, Nanqing and Gao, Feng and Li, Heng-Chao},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={SSLChange: A Self-Supervised Change Detection Framework Based on Domain Adaptation}, 
+  year={2024},
+  volume={62},
+  number={},
+  pages={1-14},
+  doi={10.1109/TGRS.2024.3489615}}
 ```
 
-* 📩 Our manuscript has been submitted to IEEE TGRS and is under review. 
+* 📩 11/1/2024 Our manuscript has been accepted by IEEE TGRS. 
 
 ## 🌏 Architecture Overview
 The overview of our proposed SSLChange pre-training framework for Remote Sensing Change Decetion tasks.  
